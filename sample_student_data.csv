@@ -1,0 +1,101 @@
+StudentID,Name,Subject,Score,StudyHours
+S001,Budi Hartono,Math,88,11
+S002,Dewi Lestari,Science,92,14
+S003,Agus Salim,History,76,8
+S004,Siti Aminah,English,95,15
+S005,Eko Prasetyo,Art,82,7
+S006,Indah Permata,Bahasa Indonesia,94,13
+S007,Joko Susilo,Math,65,9
+S008,Sri Wahyuni,Science,,12
+S009,Bambang Wijoyo,History,81,10
+S010,Ani Suryani,English,89,12
+S011,Putra Nugraha,Art,78,6
+S012,Yuli Fitriani,Bahasa Indonesia,91,14
+S013,Hendra Gunawan,Math,93,15
+S014,Maya Sari,Science,85,11
+S015,Rendy Firmansyah,History,72,8
+S016,Kartika Chandra,English,96,16
+S017,Fajar Maulana,Art,84,9
+S018,Ratna Wulandari,Bahasa Indonesia,88,11
+S019,Arief Hidayat,Math,79,10
+S020,Dian Puspita,Science,90,13
+S021,Surya Pratama,History,68,7
+S022,Lestari Putri,English,,17
+S023,Agung Santoso,Art,88,10
+S024,Rina Herawati,Bahasa Indonesia,92,12
+S025,Slamet Riyadi,Math,85,11
+S026,Fitriani Nur,Science,94,14
+S027,Adi Wijaya,History,78,9
+S028,Wulan Sari,English,91,13
+S029,Rizky Pratama,Art,80,8
+S030,Dewi Anggraini,Bahasa Indonesia,96,15
+S031,Eko Nugroho,Math,74,9
+S032,Siti Nurhaliza,Science,88,12
+S033,Budi Santoso,History,83,11
+S034,Indah Lestari,English,90,14
+S035,Joko Widodo,Art,75,7
+S036,Sri Mulyani,Bahasa Indonesia,98,16
+S037,Bambang Yudhoyono,Math,89,12
+S038,Ani Yudhoyono,Science,91,13
+S039,Putra Siregar,History,,9
+S040,Yulianti,English,87,12
+S041,Hendra Setiawan,Art,81,8
+S042,Maya Estianty,Bahasa Indonesia,93,14
+S043,Rendy Pandugo,Math,82,10
+S044,Kartika Putri,Science,86,11
+S045,Fajar Alfian,History,77,9
+S046,Ratna Galih,English,94,15
+S047,Arief Muhammad,Art,85,10
+S048,Dian Sastro,Bahasa Indonesia,97,16
+S049,Surya Insomnia,Math,70,8
+S050,Lestari Moerdijat,Science,89,12
+S051,Agung Hercules,History,73,8
+S052,Rina Nose,English,88,13
+S053,Slamet Rahardjo,Art,86,11
+S054,Fitri Carlina,Bahasa Indonesia,95,14
+S055,Adi Nugroho,Math,81,10
+S056,Wulan Guritno,Science,93,14
+S057,Rizky Billar,History,69,7
+S058,Dewi Perssik,English,92,15
+S059,Eko Patrio,Art,79,8
+S060,Siti Badriah,Bahasa Indonesia,,13
+S061,Budi Doremi,Math,84,11
+S062,Indah Kalalo,Science,87,12
+S063,Joko Anwar,History,80,10
+S064,Sri Rossa,English,99,17
+S065,Bambang Pamungkas,Art,83,9
+S066,Ani Gidayat,Bahasa Indonesia,91,13
+S067,Putra Nababan,Math,88,12
+S068,Yuli Rachmawati,Science,92,14
+S069,Hendra Kurniawan,History,76,9
+S070,Maya Hasan,English,94,15
+S071,Rendy Kjaernett,Art,77,7
+S072,Kartika Sari,Bahasa Indonesia,90,12
+S073,Fajar Sadboy,Math,62,6
+S074,Ratna Sarumpaet,Science,85,11
+S075,Arief Budiman,History,79,10
+S076,Dian Pelangi,English,96,16
+S077,Surya Saputra,Art,89,12
+S078,Lestari Handayani,Bahasa Indonesia,93,14
+S079,Agung Hapsah,Math,91,13
+S080,Rina Gunawan,Science,88,12
+S081,Slamet Widodo,History,74,8
+S082,Fitri Tropica,English,92,14
+S083,Adi Bing Slamet,Art,80,9
+S084,Wulan Permata,Bahasa Indonesia,95,15
+S085,Rizky Febian,Math,,11
+S086,Dewi Gita,Science,94,14
+S087,Eko Yuli Irawan,History,78,9
+S088,Siti Hartinah,English,97,16
+S089,Budi Anduk,Art,76,7
+S090,Indah Dewi Pertiwi,Bahasa Indonesia,96,15
+S091,Joko Tingkir,Math,85,11
+S092,Sri Sultan Hamengkubuwono,Science,90,13
+S093,Bambang Soesatyo,History,82,10
+S094,Ani Saichu,English,93,14
+S095,Putra Sulung,Art,81,9
+S096,Yuli Simorangkir,Bahasa Indonesia,92,13
+S097,Hendra Wijaya,Math,87,12
+S098,Maya Septha,Science,89,12
+S099,Rendy Martin,History,75,8
+S100,Kartika Affandi,English,98,17
