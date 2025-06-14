@@ -133,27 +133,62 @@ This script introduces the fundamental object in NumPy: the `ndarray`. It covers
 
 ## `2_intro_to_pandas.py`
 
-This script focuses on the core features of Pandas for data import, inspection, and manipulation. It introduces the `DataFrame` and shows how to perform fundamental data handling tasks.
 
 **Technical Steps:**
 
-1.  **Data Structures**: It first shows how to create a `DataFrame` from a Python dictionary, illustrating that a `DataFrame` is essentially a collection of columns (which are Pandas `Series`).
-2.  **Data Import**:
-    * `pd.read_csv('filename.csv')`: This is the primary function for reading tabular data from a text file into a DataFrame. Pandas automatically infers data types and headers.
-3.  **Data Inspection**:
-    * `.head()` / `.tail()`: Methods that return the first or last `n` rows of the DataFrame, useful for a quick preview of the data.
-    * `.info()`: A crucial method that provides a technical summary of the DataFrame, including the index type, columns, non-null counts for each column, and data types (`dtype`).
-    * `.describe()`: Generates descriptive statistics for all numerical columns, including count, mean, standard deviation, min/max, and quartiles.
-4.  **Data Selection**:
-    * **Column Selection**: `df['ColumnName']` selects a single column, returning a `Series`. `df[['Col1', 'Col2']]` selects multiple columns, returning a new `DataFrame`.
-    * **.iloc[]**: "Integer-location" based indexing. It is used to select rows and columns by their integer position (e.g., `df.iloc[2]` gets the 3rd row).
-    * **.loc[]**: "Label" based indexing. It is used to select data by its index label and column name (e.g., `df.loc['S03', 'Score']`).
-5.  **Data Cleaning**:
-    * `.isnull().sum()`: A common chain of commands. `.isnull()` returns a DataFrame of boolean values (True for missing, False for not). `.sum()` then counts the `True` values in each column.
-    * `.dropna()`: Returns a new DataFrame with rows containing any missing values removed.
-    * `.fillna()`: Fills missing (`NaN`) values with a specified value.
-    * `.astype()`: A method to cast a column to a specified data type (e.g., from `float64` to `int`).
+### **Introduction to the Script**
 
+-----
+
+### **Part 1 & 2: Creating and Loading Data**
+
+First, we create a DataFrame from scratch and then load data from a CSV file, which is the most common starting point.
+
+| Code | Explanation |
+| :--- | :--- |
+| `import pandas as pd` | Imports the pandas library with the standard alias `pd`. |
+| `data = {'Name':...}`\<br\>`df = pd.DataFrame(data)` | Creates a **DataFrame** (a 2D table) from a Python dictionary. |
+| `df = pd.read_csv(...)` | Reads data from a CSV file into a new DataFrame. A `try...except` block handles a missing file error. |
+
+-----
+
+### **Part 3: Inspecting the Data**
+
+After loading data, these commands give you a quick overview of its structure and contents.
+
+| Code | Explanation |
+| :--- | :--- |
+| `df.head()` | Displays the **first 5 rows** to quickly inspect the data. |
+| `df.tail(3)` | Displays the **last 3 rows** of the DataFrame. |
+| `df.info()` | Prints a summary of column data types and counts of non-empty values. Crucial for spotting missing data. |
+| `df.describe()` | Calculates and shows summary statistics (mean, min, max, etc.) for all numerical columns. |
+
+-----
+
+### **Part 4: Selecting Data**
+
+This section shows how to access specific rows and columns within your DataFrame.
+
+| Code | Explanation |
+| :--- | :--- |
+| `df['Subject']` | Selects a **single column**, returning a pandas **Series**. |
+| `df[['Name', 'Score']]` | Selects **multiple columns** by passing a list, returning a new DataFrame. |
+| `df.iloc[2]` | Selects data by its integer position. `.iloc[2]` gets the 3rd row. |
+| `df.set_index('StudentID')` | Changes the DataFrame's index from default integers to the `StudentID` column. |
+| `df_indexed.loc['S003', 'Score']` | Selects data by its label. `.loc[]` finds the row labeled `'S003'` and gets the value from the `'Score'` column. |
+
+-----
+
+### **Part 5 & 6: Cleaning and Finalizing Data**
+
+Real-world data needs cleaning. Here, we handle missing values and correct data types.
+
+| Code | Explanation |
+| :--- | :--- |
+| `df.isnull().sum()` | **Counts missing (`NaN`) values** in each column. |
+| `df.dropna()` | Creates a new DataFrame with all rows containing missing values **removed**. |
+| `df.fillna({'Score': 0})` | Creates a new DataFrame where missing values in the `Score` column are **filled with `0`**. |
+| `df_filled['Score'].astype(int)` | **Changes the data type** of the `Score` column from `float` to `int` now that `NaN` values are gone. |
 ---
 
 ## `3_practical_application.py`

@@ -22,7 +22,16 @@ print("\n----------- Part 2: Loading Data from a File -----------")
 # This is the most common way to get data into Pandas.
 # We'll load the 'sample_student_data.csv' file.
 # Make sure the CSV file is in the same folder as this Python script.
-df = pd.read_csv('sample_student_data.csv')
+# If you are running this in an environment like Google Colab,
+# you would first need to upload the file.
+try:
+    df = pd.read_csv('sample_student_data.csv')
+except FileNotFoundError:
+    print("\n---")
+    print("Error: 'sample_student_data.csv' not found.")
+    print("Please make sure the CSV file is in the same directory as the script.")
+    print("---")
+    exit()
 
 
 print("\n----------- Part 3: Inspecting the Data -----------")
@@ -58,34 +67,43 @@ print("\nThe third row of data (index 2):")
 print(df.iloc[2])
 
 # Selecting rows and columns with .loc (label based)
-# Get the 'Score' for the student with StudentID 'S03'
+# Get the 'Score' for the student with StudentID 'S003'
 # First, we set StudentID as the index to make selection easier
 df_indexed = df.set_index('StudentID')
-print("\nScore for student S03:")
-print(df_indexed.loc['S03', 'Score'])
+print("\nScore for student S003:")
+# FIX: Corrected 'S03' to 'S003' to match the data format.
+print(df_indexed.loc['S003', 'Score'])
 
 
 print("\n----------- Part 5: Data Cleaning -----------")
 # Real-world data is often messy. Let's find missing values.
 print("Check for missing values in each column:")
 print(df.isnull().sum())
-# We see the 'Score' column has one missing value.
+# FIX: Corrected comment to reflect the actual number of missing values (5).
+# From the .info() and .isnull().sum() output,
+# we see the 'Score' column has 5 missing values.
 
 # Option 1: Drop rows with any missing values.
 df_dropped = df.dropna()
-print("\nDataFrame after dropping rows with missing values:")
-print(df_dropped)
+print("\nDataFrame after dropping rows with missing values (notice the reduced count):")
+print(df_dropped.info())
+
 
 # Option 2: Fill missing values. This is often better.
 # Let's fill the missing score with 0.
 df_filled = df.fillna(value={'Score': 0})
 print("\nDataFrame after filling missing score with 0:")
-print(df_filled)
+# We'll check the specific rows where the score was previously NaN.
+# First, find out which indexes had null values.
+null_score_indexes = df[df['Score'].isnull()].index
+print(df_filled.loc[null_score_indexes])
 
 
 print("\n----------- Part 6: Changing Data Types -----------")
-# The 'Score' column was loaded as a float because of the missing value.
+# The 'Score' column was loaded as a float because of the missing value (NaN).
 # Let's convert our filled DataFrame's Score column to an integer.
 df_filled['Score'] = df_filled['Score'].astype(int)
 print("\nInfo after changing Score to integer:")
 df_filled.info()
+print("\nFirst 5 rows of the final, cleaned DataFrame:")
+print(df_filled.head())
