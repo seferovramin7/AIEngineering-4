@@ -23,12 +23,12 @@ print("An array of zeros:")
 print(zeros_array)
 
 # Create an array of all ones
-ones_array = np.ones((3, 2))
+ones_array = np.ones((2,3))
 print("An array of ones:")
 print(ones_array)
 
 # Create an array with a range of numbers
-range_array = np.arange(0, 10, 2) # Start at 0, end before 10, step by 2
+range_array = np.arange(0, 10, 3) # Start at 0, end before 10, step by 2
 print(f"An array with a range of numbers: {range_array}")
 
 
@@ -36,7 +36,7 @@ print("\n----------- Part 3: Array Attributes -----------")
 # We can inspect the properties of our arrays.
 print(f"Array: {np_array_a}")
 print(f"Shape of the array: {np_array_a.shape}") # Tells us the dimensions
-print(f"Number of dimensions: {np_array_a.ndim}") # 1-dimensional
+print(f"Number of dimensions: {zeros_array.ndim}") # 1-dimensional
 print(f"Data type of elements: {np_array_a.dtype}") # e.g., int64, float64
 
 print(f"\nShape of our 2x3 zeros array: {zeros_array.shape}")

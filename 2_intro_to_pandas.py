@@ -37,7 +37,7 @@ except FileNotFoundError:
 print("\n----------- Part 3: Inspecting the Data -----------")
 # Let's look at our loaded data without printing the whole thing.
 print("First 5 rows of the data (head):")
-print(df.head())
+print(df.head(2))
 
 print("\nLast 3 rows of the data (tail):")
 print(df.tail(3))
@@ -72,7 +72,7 @@ print(df.iloc[2])
 df_indexed = df.set_index('StudentID')
 print("\nScore for student S003:")
 # FIX: Corrected 'S03' to 'S003' to match the data format.
-print(df_indexed.loc['S003', 'Score'])
+print(df_indexed.loc['S063', 'Score'])
 
 
 print("\n----------- Part 5: Data Cleaning -----------")

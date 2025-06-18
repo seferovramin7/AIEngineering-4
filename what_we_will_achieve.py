@@ -11,7 +11,7 @@ data = {
     'StudentID': ['S01', 'S02', 'S03', 'S04', 'S05', 'S06'],
     'Name': ['Ali', 'Vali', 'Sara', 'Kamran', 'Leyla', 'Samir'],
     'Subject': ['Math', 'Science', 'Math', 'Science', 'Math', 'Science'],
-    'Score': [85, 92, 78, 88, 95, np.nan], # np.nan represents missing data
+    'Score': [85, 92, 78, 88, 95, np.nan],  # np.nan represents missing data
     'StudyHours': [10, 12, 8, 11, 15, 9]
 }
 
@@ -22,7 +22,6 @@ print("----------- Original Student Data -----------")
 print(df)
 print("\n")
 
-
 # You'll learn how to handle problems, like missing scores.
 # We'll fill the missing score with the average of other scores.
 average_score = df['Score'].mean()
@@ -32,14 +31,12 @@ print("----------- Data After Cleaning (No Missing Scores) -----------")
 print(df)
 print("\n")
 
-
 # You'll be able to ask complex questions and get answers easily.
 # Q1: What is the average score for each subject?
 print("----------- Average Score Per Subject -----------")
 avg_score_by_subject = df.groupby('Subject')['Score'].mean().round(2)
 print(avg_score_by_subject)
 print("\n")
-
 
 # Q2: Who is the top-performing student in Math?
 print("----------- Top Student in Math -----------")
